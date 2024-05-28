@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/shortcut-icon-zest.png" type="image/x-icon">
+    <!--Fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+
+    <title>Zest - Investimento inteligente</title>
+</head>
+
+
+<body>
+    <!--Header Único-->
+    <header>
+        <div class="container-header">
+            <a href="/index.html"><img src="/img/Logo-Zest.png" alt="Logo do Site" class="logo"></a>
+            <nav>
+                <ul class="menu">
+                    <li><a href="/calculadora.html">Calculadora</a></li>
+                    <li><a href="/comparacao.html">Comparação</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--Calculadora Simples-->
+    <section class="calculadora1">
+        <div class="container-calculadora">
+            <div class="calculator">
+                <div class="left-side">
+                    <h2 class="Titulo-calculadora">Calculadora de Investimento Bancário Simples</h2>
+                    <p>Preencha os valores para simular a rentabilidade de diferentes produtos.</p>
+                    <h3>Escolha o banco</h3>
+                    <select id="bankSelect" onchange="updateInvestmentOptions()">
+                        <option value="" selected>Selecionar banco</option>
+                        <option value="Bradesco">Bradesco</option>
+                        <option value="Itaú">Itaú</option>
+                        <option value="Banco do Brasil">Banco do Brasil</option>
+                    </select>
+                    <div id="investmentOptions"></div>
+                    <h3>Valor da Aplicação</h3>
+                    <input type="text" id="investmentInput" placeholder="R$">
+                    <h3>Período da Aplicação (em meses)</h3>
+                    <input type="number" id="periodInput" placeholder="Quantidade de meses">
+                    <div class="botao-container">
+                        <button class="botao-roxo1" onclick="calculateInvestment()">Simular Investimento</button>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div id="resultBox" style="display: none;">
+                        <div class="container-result">
+                            <p>Em <span id="periodResult"></span> você teria:</p>
+                            <p id="investmentResult"></p>
+                            <p id="returnResult"></p>
+                        </div>
+                        <div class="botao-container">
+                            <button class="botao-roxo2" onclick="redirectToInvestments()">Investimentos e
+                                Cripto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Calculadora Composta-->
+    <section class="calculadora2">
+        <div class="container-calculadora">
+            <div class="calculator" id="compostoCalculator">
+                <div class="left-side">
+                    <h2 class="Titulo-calculadora">Calculadora de Investimento Bancário Composto</h2>
+                    <p>Preencha os valores para simular a rentabilidade de diferentes produtos.</p>
+                    <h3>Escolha o banco</h3>
+                    <select id="compostoBankSelect" onchange="updateCompostoInvestmentOptions()">
+                        <option value="" selected>Selecionar banco</option>
+                        <option value="Bradesco">Bradesco</option>
+                        <option value="Itaú">Itaú</option>
+                        <option value="Banco do Brasil">Banco do Brasil</option>
+                    </select>
+                    <div id="compostoInvestmentOptions"></div>
+                    <h3>Valor da aplicação</h3>
+                    <input type="text" id="compostoInvestmentInput" placeholder="R$">
+                    <h3>Período da Aplicação (em meses)</h3>
+                    <input type="number" id="compostoPeriodInput" placeholder="Quantidade de meses"
+                        oninput="generateCompostoMonthlyInputs()">
+                    <div id="compostoMonthlyInputsContainer"></div>
+                    <div class="botao-container">
+                        <button class="botao-roxo1" onclick="calculateCompostoInvestment()">Simular
+                            Investimento</button>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div id="compostoResultBox" style="display: none;">
+                        <div class="container-result">
+                            <p>Em <span id="compostoPeriodResult"></span> você teria:</p>
+                            <p id="compostoInvestmentResult"></p>
+                            <p id="compostoTotalInvested"></p>
+                            <p id="compostoGrossReturn" style="margin-bottom: 40px;"></p>
+                            <button class="botao-roxo2" onclick="redirectToInvestments()"
+                                style="width: 100%; margin-bottom: 40px;">Investimentos e Cripto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-footer">
+            <img src="/img/ZestBranco.png" alt="Logo" class="logo">
+            <p>Descubra as melhores maneiras de fazer seu dinheiro trabalhar para você.</p>
+            <div class="social-icons">
+                <a href="#"><img src="/img/Linkedin-Icon.png" alt="Ícone 1"></a>
+                <a href="#"><img src="/img/Insta-Icon.png" alt="Ícone 2"></a>
+                <a href="#"><img src="/img/Contato-icon.png" alt="Ícone 3"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

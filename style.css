@@ -1,0 +1,585 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+html {
+    font-size: 1px;
+}
+
+body {
+    background-color: aliceblue;
+    font-size: 16px;
+}
+
+
+strong {
+    font-weight: bold;
+}
+
+/* Header */
+
+header {
+    padding: 20rem 0;
+    border-top: 1rem solid #554DB1;
+    border-bottom: 1rem solid #554DB1;
+    margin-top: 10rem;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    max-width: 1200rem;
+    margin-left: 200rem;
+}
+
+.logo {
+    height: 20rem;
+}
+
+nav {
+    flex-grow: 1;
+    margin-left: 50rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20rem;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #554DB1;
+    padding: 10rem 15rem;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    color: #09053A;
+}
+
+
+
+/* Section Home */
+
+.container-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.sub {
+    font-weight: bold;
+    font-size: 25px;
+    color: #3e3a93;
+}
+
+.zest {
+    margin: 0 10px 10px 0;
+}
+
+.leg {
+    font-weight: 500;
+    font-size: 20px;
+    color: #3e3a93;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/* Botão */
+.button-base {
+    display: flex;
+    align-items: center;
+    border: 2px solid #544CB1;
+    border-radius: 30px;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: #544CB1;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.button-base:hover {
+    background-color: #5555551a;
+}
+
+
+.button-comparacao {
+    background-color: #544CB1;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 16px;
+    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-comparacao:hover {
+    background-color: #4539a1;
+}
+
+.button-base span {
+    display: flex;
+    align-items: center;
+}
+
+.img-main {
+    margin-left: 400rem;
+}
+
+.container-left {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Titulo-Botoes {
+    max-width: 500px;
+    color: #3e3a93;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+/* Media Queries */
+
+/* Estilos para dispositivos com largura de tela até 600px (Mobile) */
+@media screen and (max-width: 600px) {
+    .container-header {
+        margin-left: 2rem;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 2rem;
+        gap: 2rem;
+    }
+
+    .Titulo-Botoes {
+        max-width: none;
+        text-align: center;
+    }
+}
+
+/* Estilos para dispositivos com largura de tela entre 601px e 900px (Tablet) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .container-header {
+        margin-left: 5rem;
+    }
+
+    .info {
+        margin-left: 5rem;
+    }
+}
+
+
+/* Calculadoras */
+
+.container-calculadora {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.calculadora2 {
+    margin-bottom: 50px;
+}
+
+.calculator {
+    display: flex;
+}
+
+.left-side,
+.right-side {
+    flex: 1;
+    padding: 40px;
+    background-color: #E7E9F1;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.left-side p {
+    margin-bottom: 20px;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+}
+
+.left-side h2 {
+    margin-top: 10px;
+    font-size: 22px;
+    color: #544CB1;
+    font-weight: bolder;
+}
+
+#investmentInput,
+#compostoInvestmentInput,
+#periodInput,
+#compostoPeriodInput,
+.compostoMonthlyInput,
+#valorAplicacao,
+#aportesMensais,
+#periodoAplicacao {
+    border-radius: 5px;
+    border: 1px solid #544CB1;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #fff;
+    color: #000;
+    outline: none;
+    width: 438px;
+    height: 18px;
+}
+
+#bankSelect,
+#compostoBankSelect {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #544CB1;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    width: 450px;
+    height: 30px;
+}
+
+#investmentInput:focus,
+#compostoInvestmentInput:focus {
+    background-color: #ffffff;
+}
+
+.left-side h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #544CB1;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#investmentOptions,
+#compostoInvestmentOptions {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.right-side {
+    flex: 1;
+    padding: 20px;
+    background-color: #E7E9F1;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.left-side input,
+.right-side input,
+.compostoMonthlyInput {
+    margin-bottom: 10px;
+}
+
+.left-side h3,
+.right-side h3,
+.txt-calculadora1 label,
+#compostoMonthlyInputsContainer label {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #544CB1 !important;
+    font-weight: bold;
+}
+
+#resultBox,
+#compostoResultBox {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 450px;
+    height: 390px;
+    margin-top: 30px;
+}
+
+.resultado-investimento {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 500px;
+    height: 450px;
+    margin-top: 30px;
+}
+
+.container-result {
+    padding: 20px;
+}
+
+
+#resultBox p,
+#compostoResultBox p {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 438px;
+}
+
+.currency-prefix {
+    position: absolute;
+    left: 10px;
+    font-size: 16px;
+    color: #544CB1;
+    font-weight: 400;
+    margin-right: 5px;
+}
+
+.currency-input {
+    padding-left: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #544CB1;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #fff;
+    color: #000;
+    outline: none;
+}
+
+
+.botao-container {
+    margin-top: 10px;
+}
+
+.botao-roxo1,
+.botao-roxo2,
+.simular-investimento {
+    background-color: #544CB1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 60px;
+    width: 450px;
+    font-size: 20px;
+}
+
+.botao-roxo1:hover,
+.botao-roxo2:hover,
+.simular-investimento:hover {
+    background-color: #4a429b;
+}
+
+.titulo-calculadora {
+    color: #544CB1;
+    font-weight: bold;
+}
+
+.txt-calculadora1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.txt-calculadora1 p {
+    color: #544CB1;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+#compostoPeriodResult span {
+    color: #000;
+}
+
+#compostoTotalInvested span {
+    font-weight: 300;
+}
+
+
+
+/* Comparação */
+
+.mais-rentaveis {
+    margin-top: 40px;
+    margin-bottom: 95px;
+}
+
+
+
+.comparacao {
+    background-color: #E7E9F1;
+    padding: 50px 0;
+}
+
+.container-comparacao {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lado-esquerdo {
+    flex: 1;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lado-direito {
+    flex: 1;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.containerbotaocomparacao {
+    margin-top: 10px;
+}
+
+.input-wrapper h3 {
+    color: #544CB1;
+}
+
+input[type="text"] {
+    border: 1px solid #544CB1;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.simular-investimento {
+    background-color: #544CB1;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.resultado-investimento {
+    margin-top: 20px;
+    padding: 35px;
+}
+
+.resultado-investimento p {
+    color: #544CB1;
+}
+
+.grafico-investimentos {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.investimento {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #544CB1;
+    color: #FFF;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+}
+
+.resultado-oculto {
+    display: none;
+}
+
+.resultado-investimento p {
+    color: #000;
+    font-weight: 300;
+}
+
+.container-resultados {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#totalInvestido {
+    color: #544CB1;
+    font-size: 16px;
+}
+
+#valorResgate {
+    display: none;
+}
+
+.resultado-investimento h3 {
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+/* Footer */
+
+footer {
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #544cb1, #3e3883);
+    color: #ffffff;
+    padding: 20px;
+}
+
+.container-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-footer p {
+    margin-left: 50px;
+}
+
+
+.social-icons {
+    margin-left: 50px
+}
+
+.social-icons a {
+    margin-right: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+}
