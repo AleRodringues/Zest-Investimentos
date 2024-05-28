@@ -2,6 +2,38 @@ function onlyNumeric(input) {
     input.value = input.value.replace(/[^0-9]/g, '');
 }
 
+function formatCurrency(input) {
+    // Remove todos os caracteres que não são dígitos
+    let value = input.value.replace(/\D/g, '');
+    // Se não houver valor, retorne vazio
+
+    if (value === '') {
+        input.value = '';
+        return;
+    }
+
+    // Converte para um número e divide por 100 para considerar as casas decimais
+    let formattedValue = (parseInt(value, 10) / 100).toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+
+    // Define o valor formatado no campo de entrada
+    input.value = formattedValue;
+}
+
+// Adicionando evento de input para formatar a moeda
+document.getElementById("investmentInput").addEventListener("input", function (event) {
+    formatCurrency(this);
+});
+
+document.getElementById("compostoInvestmentInput").addEventListener("input", function (event) {
+    formatCurrency(this);
+});
+
+
 function simularInvestimento() {
     // Obter os valores dos inputs e converter para números
     var valorAplicacao = parseFloat(document.getElementById("valorAplicacao").value.replace(/[^\d,]/g, '').replace(',', '.')) || 0;
