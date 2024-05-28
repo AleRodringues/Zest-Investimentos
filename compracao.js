@@ -46,15 +46,9 @@ function simularInvestimento() {
     // Exibir o total investido
     document.getElementById("totalInvestido").textContent = totalInvestido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
-    // Calcular o valor líquido de resgate (exemplo)
-    var valorResgate = totalInvestido * 1.1; // Exemplo: 10% de lucro sobre o total investido
-
     // Remover a classe de ocultação dos resultados
     var resultadosContainer = document.getElementById('investimentosContainer');
     resultadosContainer.classList.remove('resultado-oculto');
-
-    // Exibir o valor líquido de resgate
-    document.getElementById("valorResgate").textContent = valorResgate.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
     // Definir os valores dos investimentos com percentuais reais
     var investimentos = {

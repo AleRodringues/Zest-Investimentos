@@ -116,6 +116,8 @@ function updateCompostoInvestmentOptions() {
         return;
     }
 
+    
+
     var options = investimentos[selectedBank];
 
     options.forEach(function (option, index) {
