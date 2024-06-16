@@ -218,12 +218,12 @@ a {
 
 /* Personalizar a cor e o tamanho da caixinha do alerta de erro */
 .toast-error {
-    background-color: #B0554C;
+    background-color: #3e3883;
     color: #fff;
     font-size: 16px;
     padding: 20px;
     border-radius: 10px;
-    width: 100px;
+    width: fit-content;
 }
 
 /* Personalizar a cor e o tamanho da caixinha do alerta de informação */
