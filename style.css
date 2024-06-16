@@ -217,7 +217,7 @@ a {
 } */
 
 /* Personalizar a cor e o tamanho da caixinha do alerta de erro */
-.toastr-error {
+.custom-toast-error {
     background-color: #3e3883;
     color: #fff;
     font-size: 16px;
@@ -227,7 +227,7 @@ a {
 }
 
 /* Personalizar a cor e o tamanho da caixinha do alerta de informação */
-/* .toastr-info {
+/* .toast-info {
     background-color: #17a2b8;
     color: #fff;
     font-size: 16px;
@@ -236,7 +236,7 @@ a {
 } */
 
 /* Personalizar a cor e o tamanho da caixinha do alerta de aviso */
-/* .toastr-warning {
+/* .toast-warning {
     background-color: #ffc107;
     color: #000;
     font-size: 16px;
@@ -245,7 +245,7 @@ a {
 } */
 
 /* Personalizar a barra de progresso */
-/* .toastr-progress {
+/* .toast-progress {
     background-color: #fff; Branco
 } */
 

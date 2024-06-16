@@ -57,6 +57,7 @@ function calculateInvestment() {
             positionClass: 'toast-top-center',
             timeOut: 5000,
             extendedTimeOut: 1000
+            toastClass: 'custom-toast-error' //Classe personalizada no CSS
         });
         return;
     }
@@ -177,9 +178,11 @@ function calculateCompostoInvestment() {
             positionClass: 'toast-top-center',
             timeOut: 5000,
             extendedTimeOut: 1000
+            toastClass: 'custom-toast-error' //Classe personalizada no CSS
         });
         return;
     }
+
     //{
       //  alert("Por favor, preencha todos os campos e selecione uma opção de investimento.");
         //return;
