@@ -171,9 +171,19 @@ function calculateCompostoInvestment() {
     var principalInput = document.getElementById("compostoInvestmentInput").value.replace(/[^\d,-]/g, '').replace(',', '.');
 
     if (!selectedOption || !principalInput || !period) {
-        alert("Por favor, preencha todos os campos e selecione uma opção de investimento.");
+        toastr.error("Por favor, preencha todos os campos e selecione uma opção de investimento.", "Erro", {
+            closeButton: true,
+            progressBar: true,
+            positionClass: 'toast-top-right',
+            timeOut: 5000,
+            extendedTimeOut: 1000
+        });
         return;
     }
+    //{
+      //  alert("Por favor, preencha todos os campos e selecione uma opção de investimento.");
+        //return;
+    //}
 
     var interestRate = parseFloat(selectedOption.value);
     var principal = parseFloat(principalInput);
