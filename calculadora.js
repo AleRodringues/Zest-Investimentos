@@ -57,6 +57,7 @@ function calculateInvestment() {
             positionClass: 'toast-top-center',
             timeOut: 5000,
             extendedTimeOut: 1000
+            toastClass: 'custom-toast-error' // Adiciona a classe personalizada
         });
         return;
     }
