@@ -51,7 +51,8 @@ function calculateInvestment() {
     var selectedOption = document.querySelector('input[name="investmentOption"]:checked');
 
     if (!selectedOption || investmentInput <= 0 || periodInput <= 0) {
-        alert("Por favor, preencha todos os campos corretamente e selecione uma opção de investimento.");
+        toastr.error('Por favor, preencha todos os campos corretamente e selecione uma opção de investimento.', 'Erro');
+        //alert("Por favor, preencha todos os campos corretamente e selecione uma opção de investimento.");
         return;
     }
 
