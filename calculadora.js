@@ -51,10 +51,19 @@ function calculateInvestment() {
     var selectedOption = document.querySelector('input[name="investmentOption"]:checked');
 
     if (!selectedOption || investmentInput <= 0 || periodInput <= 0) {
-        toastr.error('Por favor, preencha todos os campos corretamente e selecione uma opção de investimento.', 'Erro');
-        //alert("Por favor, preencha todos os campos corretamente e selecione uma opção de investimento.");
+        toastr.error("Por favor, preencha todos os campos corretamente e selecione uma opção de investimento.", "Erro", {
+            closeButton: true,
+            progressBar: true,
+            positionClass: 'toast-top-right',
+            timeOut: 5000,
+            extendedTimeOut: 1000
+        });
         return;
     }
+    //if (!selectedOption || investmentInput <= 0 || periodInput <= 0) {
+        //alert("Por favor, preencha todos os campos corretamente e selecione uma opção de investimento.");
+        //return;
+   // }
 
     var interestRate = parseFloat(selectedOption.value);
     var principal = investmentInput;
