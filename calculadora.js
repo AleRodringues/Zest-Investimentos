@@ -54,7 +54,7 @@ function calculateInvestment() {
         toastr.error("Por favor, preencha todos os campos corretamente e selecione uma opção de investimento.", "Erro", {
             closeButton: true,
             progressBar: true,
-            positionClass: 'toast-top-right',
+            positionClass: 'toast-top-center',
             timeOut: 5000,
             extendedTimeOut: 1000
         });
@@ -174,7 +174,7 @@ function calculateCompostoInvestment() {
         toastr.error("Por favor, preencha todos os campos e selecione uma opção de investimento.", "Erro", {
             closeButton: true,
             progressBar: true,
-            positionClass: 'toast-top-right',
+            positionClass: 'toast-top-center',
             timeOut: 5000,
             extendedTimeOut: 1000
         });
