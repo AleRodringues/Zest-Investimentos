@@ -205,6 +205,50 @@ a {
     }
 }
 
+/* CSS para biblioteca Toastr de alertas */
+
+/* Personalizar a cor e o tamanho da caixinha do alerta de sucesso */
+/* .toast-success {
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 10px;
+} */
+
+/* Personalizar a cor e o tamanho da caixinha do alerta de erro */
+.toast-error {
+    background-color: #B0554C;
+    color: #fff;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100px;
+}
+
+/* Personalizar a cor e o tamanho da caixinha do alerta de informação */
+/* .toast-info {
+    background-color: #17a2b8;
+    color: #fff;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 10px;
+} */
+
+/* Personalizar a cor e o tamanho da caixinha do alerta de aviso */
+/* .toast-warning {
+    background-color: #ffc107;
+    color: #000;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 10px;
+} */
+
+/* Personalizar a barra de progresso */
+/* .toast-progress {
+    background-color: #fff; Branco
+} */
+
 
 /* Calculadoras */
 
