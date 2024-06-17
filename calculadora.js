@@ -1,25 +1,66 @@
-const investimentos = {
-    "Bradesco": [
-        { nome: "<strong>CDI/Selic</strong> - Simples Renda Fixa - <span style='color:#544CB1;'>11,06%</span>", juros: 11.06 },
-        { nome: "<strong>Prefixado</strong> - Plus Renda Fixa - <span style='color:#544CB1;'>10,42%</span>", juros: 10.42 },
-        { nome: "<strong>Multimercado</strong> - Macro Multimercado - <span style='color:#544CB1;'>9,34%</span>", juros: 9.34 }
-    ],
-    "Itaú": [
-        { nome: "<strong>Diferenciado Crédito Privado</strong> - Renda Fixa - <span style='color:#544CB1;'>14,24%</span>", juros: 14.24 },
-        { nome: "<strong>Itaú Global Dinamico</strong> - Renda Fixa Longo Prazo - <span style='color:#544CB1;'>10,72%</span>", juros: 10.72 },
-        { nome: "<strong>Itaú IPCA Action</strong> - Renda Fixa - <span style='color:#544CB1;'>8,43%</span>", juros: 8.43 }
-    ],
-    "Banco do Brasil": [
-        { nome: "<strong>Renda Fixa Simples</strong> - <span style='color:#544CB1;'>10,97%</span>", juros: 10.97 },
-        { nome: "<strong>Multimercado</strong> - Macro Multimercado Absolute Vertex - <span style='color:#544CB1;'>15,77%</span>", juros: 15.77 },
-        { nome: "<strong>Renda Fixa LP Prefixado</strong> - <span style='color:#544CB1;'>13,11%</span>", juros: 13.11 }
-    ]
-};
+//FETCH - REMOÇÃO DAS CONSTANTES COM AS TAXAS DE JUROS PARA SUBSTITUIÇÃO POR ARQUIVO JSON
+
+// const investimentos = {
+//     "Bradesco": [
+//         { nome: "<strong>CDI/Selic</strong> - Simples Renda Fixa - <span style='color:#544CB1;'>11,06%</span>", juros: 11.06 },
+//         { nome: "<strong>Prefixado</strong> - Plus Renda Fixa - <span style='color:#544CB1;'>10,42%</span>", juros: 10.42 },
+//         { nome: "<strong>Multimercado</strong> - Macro Multimercado - <span style='color:#544CB1;'>9,34%</span>", juros: 9.34 }
+//     ],
+//     "Itaú": [
+//         { nome: "<strong>Diferenciado Crédito Privado</strong> - Renda Fixa - <span style='color:#544CB1;'>14,24%</span>", juros: 14.24 },
+//         { nome: "<strong>Itaú Global Dinamico</strong> - Renda Fixa Longo Prazo - <span style='color:#544CB1;'>10,72%</span>", juros: 10.72 },
+//         { nome: "<strong>Itaú IPCA Action</strong> - Renda Fixa - <span style='color:#544CB1;'>8,43%</span>", juros: 8.43 }
+//     ],
+//     "Banco do Brasil": [
+//         { nome: "<strong>Renda Fixa Simples</strong> - <span style='color:#544CB1;'>10,97%</span>", juros: 10.97 },
+//         { nome: "<strong>Multimercado</strong> - Macro Multimercado Absolute Vertex - <span style='color:#544CB1;'>15,77%</span>", juros: 15.77 },
+//         { nome: "<strong>Renda Fixa LP Prefixado</strong> - <span style='color:#544CB1;'>13,11%</span>", juros: 13.11 }
+//     ]
+// };
+
+
+//FETCH - Função para buscar os dados JSON:
+let investimentos = {};
+
+async function fetchInvestimentos() {
+    const response = await fetch('investimentos.json');
+    const data = await response.json();
+    investimentos = data;
+    return data;
+}
 
 
 // Função para selecionar o Banco de Investimento
+//FETCH - SUBSTITUINDO ESSA FUNÇAO PELA FUNCAO ABAIXO PARA BUSCAR OS DADOS DINAMICAMENTE
 
-function updateInvestmentOptions() {
+// function updateInvestmentOptions() {
+//     var bankSelect = document.getElementById("bankSelect");
+//     var investmentOptions = document.getElementById("investmentOptions");
+//     var selectedBank = bankSelect.value;
+
+//     investmentOptions.innerHTML = "";
+
+//     if (selectedBank === "") {
+//         investmentOptions.innerHTML = "";
+//         return;
+//     }
+
+//     var options = investimentos[selectedBank];
+
+//     options.forEach(function (option, index) {
+//         var radioHtml = `<div>
+//             <input type="radio" id="investment${index}" name="investmentOption" value="${option.juros}" />
+//             <label for="investment${index}">${option.nome}</label>
+//         </div>`;
+//         investmentOptions.insertAdjacentHTML('beforeend', radioHtml);
+//     });
+// }
+
+async function updateInvestmentOptions() {
+    if (Object.keys(investimentos).length === 0) {
+        await fetchInvestimentos();
+    }
+
     var bankSelect = document.getElementById("bankSelect");
     var investmentOptions = document.getElementById("investmentOptions");
     var selectedBank = bankSelect.value;
@@ -41,6 +82,7 @@ function updateInvestmentOptions() {
         investmentOptions.insertAdjacentHTML('beforeend', radioHtml);
     });
 }
+
 
 
 //Função para calcular e mostrar os resultados no lado direito
@@ -116,17 +158,46 @@ document.getElementById("compostoInvestmentInput").addEventListener("input", fun
     formatCurrency(this);
 });
 
-function updateCompostoInvestmentOptions() {
+
+//FETCH - SUBSTITUINDO ESSA FUNÇAO PELA FUNCAO ABAIXO PARA BUSCAR OS DADOS DINAMICAMENTE
+
+// function updateCompostoInvestmentOptions() {
+//     var bankSelect = document.getElementById("compostoBankSelect");
+//     var investmentOptions = document.getElementById("compostoInvestmentOptions");
+//     var selectedBank = bankSelect.value; investmentOptions.innerHTML = "";
+
+//     if (selectedBank === "") {
+//         investmentOptions.innerHTML = "";
+//         return;
+//     }
+
+    
+//     var options = investimentos[selectedBank];
+
+//     options.forEach(function (option, index) {
+//         var radioHtml = `<div class="investment-option">
+//             <input type="radio" id="compostoInvestment${index}" name="compostoInvestmentOption" value="${option.juros}" />
+//             <label for="compostoInvestment${index}">${option.nome}</label>
+//         </div>`;
+//         investmentOptions.insertAdjacentHTML('beforeend', radioHtml);
+//     });
+// }
+
+async function updateCompostoInvestmentOptions() {
+    if (Object.keys(investimentos).length === 0) {
+        await fetchInvestimentos();
+    }
+
     var bankSelect = document.getElementById("compostoBankSelect");
     var investmentOptions = document.getElementById("compostoInvestmentOptions");
-    var selectedBank = bankSelect.value; investmentOptions.innerHTML = "";
+    var selectedBank = bankSelect.value;
+
+    investmentOptions.innerHTML = "";
 
     if (selectedBank === "") {
         investmentOptions.innerHTML = "";
         return;
     }
-
-    
 
     var options = investimentos[selectedBank];
 
@@ -138,6 +209,8 @@ function updateCompostoInvestmentOptions() {
         investmentOptions.insertAdjacentHTML('beforeend', radioHtml);
     });
 }
+
+
 
 function generateCompostoMonthlyInputs() {
     var periodInput = document.getElementById("compostoPeriodInput");

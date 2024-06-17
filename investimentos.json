@@ -1,0 +1,17 @@
+{
+    "Bradesco": [
+        { "nome": "<strong>CDI/Selic</strong> - Simples Renda Fixa - <span style='color:#544CB1;'>11,06%</span>", "juros": 11.06 },
+        { "nome": "<strong>Prefixado</strong> - Plus Renda Fixa - <span style='color:#544CB1;'>10,42%</span>", "juros": 10.42 },
+        { "nome": "<strong>Multimercado</strong> - Macro Multimercado - <span style='color:#544CB1;'>9,34%</span>", "juros": 9.34 }
+    ],
+    "Itaú": [
+        { "nome": "<strong>Diferenciado Crédito Privado</strong> - Renda Fixa - <span style='color:#544CB1;'>14,24%</span>", "juros": 14.24 },
+        { "nome": "<strong>Itaú Global Dinamico</strong> - Renda Fixa Longo Prazo - <span style='color:#544CB1;'>10,72%</span>", "juros": 10.72 },
+        { "nome": "<strong>Itaú IPCA Action</strong> - Renda Fixa - <span style='color:#544CB1;'>8,43%</span>", "juros": 8.43 }
+    ],
+    "Banco do Brasil": [
+        { "nome": "<strong>Renda Fixa Simples</strong> - <span style='color:#544CB1;'>10,97%</span>", "juros": 10.97 },
+        { "nome": "<strong>Multimercado</strong> - Macro Multimercado Absolute Vertex - <span style='color:#544CB1;'>15,77%</span>", "juros": 15.77 },
+        { "nome": "<strong>Renda Fixa LP Prefixado</strong> - <span style='color:#544CB1;'>13,11%</span>", "juros": 13.11 }
+    ]
+}
